@@ -1,5 +1,5 @@
 // Typing Effect
-const text = "Full Stack Developer | Java • React • Python • AWS ";
+const text = "Full Stack Developer | Java • React • Python • AWS";
 let index = 0;
 
 function typeEffect() {
