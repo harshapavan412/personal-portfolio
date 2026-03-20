@@ -5,9 +5,18 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* BACKGROUND ANIMATION */
 body {
-    background: radial-gradient(circle at top, #0a0a0a, #000);
+    background: linear-gradient(-45deg, #000, #0a0a0a, #001f1f, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
     color: white;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* NAV */
@@ -23,13 +32,8 @@ header {
     justify-content: space-between;
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
 .nav-links a {
+    margin-left: 20px;
     color: #aaa;
     text-decoration: none;
 }
@@ -53,13 +57,21 @@ header {
     color: transparent;
 }
 
-.typing {
-    margin: 20px;
+.tagline {
+    margin-top: 15px;
     color: #aaa;
 }
 
-.tagline {
-    color: #777;
+.subtag {
+    color: #666;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.tech-stack {
+    margin-top: 8px;
+    color: #888;
+    font-size: 13px;
 }
 
 /* BUTTONS */
@@ -84,13 +96,18 @@ header {
     color: #00f5d4;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
     padding: 100px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
+h2 {
+    margin-bottom: 30px;
+}
+
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -99,17 +116,34 @@ header {
 
 /* CARDS */
 .card {
+    position: relative;
     padding: 20px;
     border-radius: 10px;
     background: rgba(255,255,255,0.03);
     border: 1px solid #111;
     transition: 0.3s;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     border-color: #00f5d4;
-    box-shadow: 0 0 20px rgba(0,245,212,0.2);
+    box-shadow: 0 0 25px rgba(0,245,212,0.2);
+}
+
+/* GLOW EFFECT */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,245,212,0.15), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .tech {
@@ -117,7 +151,7 @@ header {
     color: #aaa;
 }
 
-/* ANIMATION */
+/* REVEAL */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -127,6 +161,14 @@ header {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    color: #777;
 }
 
 @keyframes fadeIn {
