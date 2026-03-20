@@ -6,7 +6,6 @@ function reveal() {
     }
   });
 }
-
 window.addEventListener("scroll", reveal);
 window.onload = reveal;
 
@@ -20,7 +19,6 @@ window.addEventListener("scroll", () => {
 
 // CURSOR GLOW
 const glow = document.querySelector(".cursor-glow");
-
 document.addEventListener("mousemove", (e) => {
   glow.style.left = e.clientX + "px";
   glow.style.top = e.clientY + "px";
@@ -34,7 +32,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particles = [];
-
 for (let i = 0; i < 60; i++) {
   particles.push({
     x: Math.random() * canvas.width,
@@ -58,5 +55,4 @@ function draw() {
 
   requestAnimationFrame(draw);
 }
-
 draw();

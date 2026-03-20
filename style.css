@@ -25,6 +25,7 @@ header {
     width: 100%;
     padding: 20px 40px;
     backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
 .nav {
@@ -47,7 +48,8 @@ header {
     align-items: center;
     text-align: center;
 
-    animation: fadeIn 1s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .glow {
@@ -69,6 +71,8 @@ header {
     margin: 10px;
     border-radius: 6px;
     text-decoration: none;
+    position: relative;
+    z-index: 2;
 }
 
 .btn {
@@ -90,6 +94,8 @@ header {
     padding: 100px 20px;
     max-width: 1000px;
     margin: auto;
+    position: relative;
+    z-index: 1;
 }
 
 /* GRID */
@@ -108,40 +114,25 @@ header {
     border: 1px solid #111;
     transition: 0.3s;
     overflow: hidden;
+    z-index: 1;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px);
     border-color: #00f5d4;
     box-shadow: 0 0 25px rgba(0,245,212,0.2);
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
+/* FIX: Glow should NOT block clicks */
+.cursor-glow {
+    pointer-events: none;
+    position: fixed;
+    width: 300px;
+    height: 300px;
     background: radial-gradient(circle, rgba(0,245,212,0.15), transparent);
-    opacity: 0;
-    transition: 0.4s;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
-.tech { margin-top: 10px; color: #aaa; }
-
-/* REVEAL */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.6s;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
 }
 
 /* PROGRESS BAR */
@@ -152,17 +143,6 @@ header {
     background: #00f5d4;
     width: 0%;
     z-index: 9999;
-}
-
-/* CURSOR GLOW */
-.cursor-glow {
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(0,245,212,0.15), transparent);
-    pointer-events: none;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* PARTICLES */
@@ -179,11 +159,5 @@ header {
 footer {
     text-align: center;
     padding: 30px;
-    margin-top: 50px;
     color: #777;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
 }
