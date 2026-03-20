@@ -1,5 +1,5 @@
 // Typing Effect
-const text = "Front-End Engineer with Backend Architecture Expertise";
+const text = "Building Scalable Frontend Systems with React & TypeScript ⚡";
 let index = 0;
 
 function typeEffect() {

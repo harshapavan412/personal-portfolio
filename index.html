@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Harsha Ganugula | Software Engineer</title>
+    <title>Harsha Ganugula | Frontend Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Main CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -21,7 +22,6 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -32,13 +32,18 @@
     </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section id="home" class="hero reveal">
+<!-- HERO -->
+<section id="home" class="hero">
     <h1>Hi, I'm <span>Harsha Ganugula</span></h1>
+
     <h2 class="typing"></h2>
 
+    <p class="tagline">
+        Frontend Engineer • React • TypeScript • Kafka • AWS
+    </p>
+
     <div class="social-icons">
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank">
+        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">
             <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://github.com/harshapavan412" target="_blank">
@@ -51,9 +56,9 @@
 
     <div class="hero-buttons">
         <a href="Harsha_Pavan_Resume.pdf" download class="btn">
-            <i class="fas fa-download"></i> Download Resume
+            Download Resume
         </a>
-        <a href="#contact" class="btn-outline">Contact Me</a>
+        <a href="#contact" class="btn-outline">Contact</a>
     </div>
 </section>
 
@@ -61,56 +66,31 @@
 <section id="about" class="section glass reveal">
     <h2>About Me</h2>
     <p>
-        Software Engineer with 3+ years of experience building scalable,
-        secure, full-stack applications using Java (Spring Boot), React,
-        Python, Kafka, AWS, and Azure. Passionate about designing
-        event-driven architectures and delivering enterprise-grade solutions.
+        Frontend-focused Software Engineer with 3+ years of experience building
+        scalable web applications using React, TypeScript, and modern UI systems.
+        I specialize in creating intuitive dashboards, real-time features, and
+        high-performance user experiences backed by robust backend systems.
     </p>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section reveal">
-    <h2>Professional Experience</h2>
+    <h2>Production Experience</h2>
 
     <div class="card">
-        <h3>Software Engineer – BlueCross BlueShield</h3>
-        <span>Jan 2024 – Present | Remote, USA</span>
-        <ul>
-            <li>Improved API performance by 30% using Spring Boot.</li>
-            <li>Built scalable event-driven microservices with Kafka.</li>
-            <li>Implemented JWT authentication & RBAC security.</li>
-            <li>Enhanced observability using AWS CloudWatch.</li>
-            <li>Achieved 85%+ test coverage.</li>
-        </ul>
+        <h3>BlueCross BlueShield</h3>
+        <p>
+            Built scalable role-based dashboards and event-driven systems using
+            React, TypeScript, Spring Boot, and Kafka.
+        </p>
     </div>
 
     <div class="card">
-        <h3>Software Developer – Cisco</h3>
-        <span>Jun 2021 – Aug 2022 | Bangalore, India</span>
-        <ul>
-            <li>Built enterprise Contract Management System.</li>
-            <li>Reduced DB latency by 45%.</li>
-            <li>Developed NLP clause classification (92% accuracy).</li>
-            <li>Maintained 90%+ code coverage with CI/CD.</li>
-            <li>Deployed on Azure with 99.9% uptime.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section glass reveal">
-    <h2>Technical Skills</h2>
-
-    <div class="skills-grid">
-        <div><i class="fab fa-java"></i> Java / Spring Boot</div>
-        <div><i class="fab fa-python"></i> Python / Django</div>
-        <div><i class="fab fa-react"></i> React.js</div>
-        <div><i class="fas fa-database"></i> PostgreSQL / MongoDB</div>
-        <div><i class="fab fa-aws"></i> AWS</div>
-        <div><i class="fab fa-microsoft"></i> Azure</div>
-        <div><i class="fas fa-stream"></i> Kafka</div>
-        <div><i class="fas fa-lock"></i> JWT / Security</div>
-        <div><i class="fas fa-code-branch"></i> CI/CD</div>
+        <h3>Cisco</h3>
+        <p>
+            Developed enterprise contract management systems with backend APIs,
+            NLP processing, and cloud deployment on Azure.
+        </p>
     </div>
 </section>
 
@@ -118,70 +98,60 @@
 <section id="projects" class="section reveal">
     <h2>Projects</h2>
 
-    <!-- Project 1 -->
     <div class="card">
         <h3>📊 SaaS Analytics Dashboard</h3>
         <p>
-            A production-style analytics dashboard built with React that integrates
-            live API data and visualizes key metrics using charts and tables.
-            Includes search, pagination, loading states, theme switching,
-            and modular component architecture.
+            Production-style admin dashboard with API integration,
+            charts, pagination, and theme switching.
         </p>
 
+        <ul>
+            <li>TypeScript + React architecture</li>
+            <li>API integration with loading states</li>
+            <li>Dark/light mode</li>
+        </ul>
+
         <div class="project-links">
-            <a href="https://saas-analytics-dashboard-v7f4.vercel.app" target="_blank" class="btn">
-                Live Demo
-            </a>
-            <a href="https://github.com/harshapavan412/saas-analytics-dashboard" target="_blank" class="btn-outline">
-                GitHub
-            </a>
+            <a href="https://saas-analytics-dashboard-v7f4.vercel.app" target="_blank" class="btn">Live</a>
+            <a href="https://github.com/harshapavan412/saas-analytics-dashboard" target="_blank" class="btn-outline">Code</a>
         </div>
     </div>
 
-    <!-- Project 2 -->
     <div class="card">
-        <h3>💳 SubTrack – Subscription Management SaaS</h3>
+        <h3>💳 SubTrack</h3>
         <p>
-            A SaaS-style subscription management platform that models real-world
-            billing cycles and calculates normalized Monthly Recurring Revenue (MRR).
-            Features include protected routes, tier-based feature gating (Free vs Pro),
-            analytics summary dashboard, and persistent local storage.
+            SaaS subscription manager with billing logic, feature gating,
+            and analytics dashboard.
         </p>
 
+        <ul>
+            <li>React + TypeScript</li>
+            <li>Protected routes</li>
+            <li>MRR calculations</li>
+        </ul>
+
         <div class="project-links">
-            <a href="https://subtrack-ruddy.vercel.app/" target="_blank" class="btn">
-                Live Demo
-            </a>
-            <a href="https://github.com/harshapavan412/subtrack" target="_blank" class="btn-outline">
-                GitHub
-            </a>
+            <a href="https://subtrack-ruddy.vercel.app/" target="_blank" class="btn">Live</a>
+            <a href="https://github.com/harshapavan412/subtrack" target="_blank" class="btn-outline">Code</a>
         </div>
     </div>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section glass reveal">
     <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> pavanharsha412@gmail.com</p>
-    <p><i class="fas fa-phone"></i> (940) 843-3049</p>
 
-    <div class="social-icons">
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/harshapavan412" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-    </div>
+    <h3>🚀 Open to Software Engineer Opportunities</h3>
+    <p>Let’s build something impactful together.</p>
+
+    <p>Email: pavanharsha412@gmail.com</p>
+    <p>Phone: (940) 843-3049</p>
 </section>
 
 <footer>
-    <p>© 2026 Harsha Ganugula | Software Engineer</p>
+    <p>© 2026 Harsha Ganugula</p>
 </footer>
 
-<!-- JavaScript -->
 <script src="script.js"></script>
-
 </body>
 </html>
