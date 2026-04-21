@@ -1,0 +1,235 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== NAV ===== */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 40px;
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00f5d4;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.glow {
+  font-size: 64px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00f5d4, #5b8cff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin-top: 15px;
+  color: #bbb;
+  font-size: 16px;
+}
+
+.subtag {
+  margin-top: 12px;
+  color: #777;
+  font-size: 14px;
+  max-width: 600px;
+}
+
+.tech-stack {
+  margin-top: 10px;
+  color: #888;
+  font-size: 13px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+  margin-top: 30px;
+}
+
+.btn, .btn-outline {
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn {
+  background: #00f5d4;
+  color: black;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px rgba(0,245,212,0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid #00f5d4;
+  color: #00f5d4;
+}
+
+.btn-outline:hover {
+  background: rgba(0,245,212,0.1);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 120px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #fff;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ===== CARD (GLASSMORPHISM) ===== */
+.card {
+  padding: 25px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,245,212,0.4);
+  box-shadow: 0 0 30px rgba(0,245,212,0.15);
+}
+
+/* ===== TECH TAG ===== */
+.tech {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #00f5d4;
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== CURSOR GLOW ===== */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0,245,212,0.15), transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* ===== PROGRESS BAR ===== */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  height: 3px;
+  background: #00f5d4;
+  width: 0%;
+  z-index: 9999;
+}
+
+/* ===== PARTICLES ===== */
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* ===== CONTACT ===== */
+.contact-text {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 13px;
+}
